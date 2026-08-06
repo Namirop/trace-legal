@@ -173,7 +173,8 @@
   <p>
     S’y ajoutent les informations que le SDK de mesure joint d’office à chaque
     événement : modèle d’appareil, version d’Android, langue, pays, version de
-    l’application, et un identifiant d’installation aléatoire.
+    l’application, un identifiant d’installation aléatoire, et la source de
+    l’installation telle que Google Play la rapporte.
   </p>
   <p>
     <strong>Ce qui n’est jamais mesuré :</strong> tes réponses aux exercices,
@@ -190,10 +191,13 @@
     je vois des courbes et des totaux, jamais une personne.
   </p>
   <ul>
-    <li><strong>Pas d’identifiant publicitaire.</strong> L’application retire la
-      permission <code>AD_ID</code> de son manifeste et désactive la collecte
-      correspondante dans le SDK : rien ne permet de te suivre d’une application
-      à l’autre.</li>
+    <li><strong>Pas d’identifiant publicitaire.</strong> L’application retire de
+      son manifeste les trois permissions qui y donnent accès —
+      <code>AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code> et
+      <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, que le SDK déclare pour son
+      compte — et désactive la collecte correspondante. Rien ne permet de te
+      suivre d’une application à l’autre, et ça se vérifie dans la liste des
+      autorisations affichée par le magasin.</li>
     <li><strong>Pas de publicité, pas de revente, pas de partage</strong> avec un
       tiers autre que Google en tant que prestataire.</li>
     <li><strong>Conservation :</strong> quatorze mois au maximum, après quoi
